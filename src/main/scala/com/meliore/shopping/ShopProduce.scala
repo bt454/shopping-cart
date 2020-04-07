@@ -11,6 +11,7 @@ object ShopProduce {
     name match {
       case "Apple"  => Apple()
       case "Orange" => Orange()
+      case _        => throw new IllegalArgumentException(s"No fruit with name $name")
     }
   }
 }
