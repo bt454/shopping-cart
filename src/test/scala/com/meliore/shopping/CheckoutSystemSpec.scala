@@ -1,5 +1,6 @@
 package com.meliore.shopping
 
+import com.meliore.shopping.ShopProduce.{Apple, Orange}
 import org.mockito.MockitoSugar
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
