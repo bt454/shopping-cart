@@ -8,6 +8,9 @@ ThisBuild / organizationName := "Meliore Ltd"
 lazy val root = (project in file("."))
   .settings(
     name := "shopping-cart",
-    libraryDependencies += scalaTest % Test
+    libraryDependencies ++= Seq(
+      scalaTest % Test,
+      mockitoScala % Test
+    )
   )
 
