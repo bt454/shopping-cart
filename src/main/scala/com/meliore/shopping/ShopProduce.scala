@@ -7,4 +7,6 @@ object ShopProduce {
   case class Apple() extends Fruit(0.6)
   case class Orange() extends Fruit(0.25)
 
+  def fromString(name: String): Fruit =
+    Apple()
 }

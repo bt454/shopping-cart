@@ -1,9 +1,8 @@
 package com.meliore.shopping
 
-import com.meliore.shopping.ShopProduce.Apple
+import com.meliore.shopping.ShopProduce.{Apple, fromString}
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
-import ShopProduce.fromString
 
 class ShopProduceSpec extends AnyWordSpec with Matchers {
 
