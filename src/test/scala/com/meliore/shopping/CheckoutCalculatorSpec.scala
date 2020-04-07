@@ -25,5 +25,11 @@ class CheckoutCalculatorSpec extends AnyWordSpec with Matchers {
         checkoutCalculator.calculateTotal(List(Orange())) shouldBe 25
       }
     }
+
+    "supplied with one orange and one apple" should {
+      "result in a total cost of 85" in {
+        checkoutCalculator.calculateTotal(List(Orange(), Apple())) shouldBe 85
+      }
+    }
   }
 }
