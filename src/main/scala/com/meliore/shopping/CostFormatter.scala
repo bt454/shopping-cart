@@ -2,6 +2,6 @@ package com.meliore.shopping
 
 class CostFormatter {
 
-  def format(value: Double): String =
-    "£2.06"
+  def format(valueInPounds: Double): String =
+    f"£$valueInPounds%1.2f"
 }
