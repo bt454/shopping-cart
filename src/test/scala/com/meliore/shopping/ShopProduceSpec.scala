@@ -18,5 +18,13 @@ class ShopProduceSpec extends AnyWordSpec with Matchers {
         fromString("Orange") shouldBe Orange()
       }
     }
+
+    "supplied with a name other than Apple or Orange" should {
+      "throw an IllegalArgumentException" in {
+        intercept[IllegalArgumentException] {
+          fromString("Kiwi")
+        }
+      }
+    }
   }
 }
