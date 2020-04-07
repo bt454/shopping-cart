@@ -13,5 +13,11 @@ class CheckoutCalculatorSpec extends AnyWordSpec with Matchers {
         checkoutCalculator.calculateTotal(List(Apple)) shouldBe 60
       }
     }
+
+    "supplied with an empty list" should {
+      "result in a total cost of 0" in {
+        checkoutCalculator.calculateTotal(Nil) shouldBe 0
+      }
+    }
   }
 }
