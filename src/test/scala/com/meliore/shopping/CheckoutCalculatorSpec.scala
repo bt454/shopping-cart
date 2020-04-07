@@ -34,14 +34,14 @@ class CheckoutCalculatorSpec extends AnyWordSpec with Matchers {
     }
 
     "supplied with one orange and two apples" should {
-      "result in a total cost of 1.45" in {
-        checkoutCalculator.calculateTotal(List(Orange(), Apple(), Apple())) shouldBe 1.45
+      "result in a total cost of 0.85" in {
+        checkoutCalculator.calculateTotal(List(Orange(), Apple(), Apple())) shouldBe 0.85
       }
     }
 
     "supplied with two oranges and three apples in mixed order" should {
-      "result in a total cost of 2.3" in {
-        checkoutCalculator.calculateTotal(List(Apple(), Orange(), Apple(), Apple(), Orange())) shouldBe 2.3
+      "result in a total cost of 1.7" in {
+        checkoutCalculator.calculateTotal(List(Apple(), Orange(), Apple(), Apple(), Orange())) shouldBe 1.7
       }
     }
   }
