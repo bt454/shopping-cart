@@ -9,8 +9,8 @@ class CheckoutCalculatorSpec extends AnyWordSpec with Matchers {
 
   "calculateTotal" when {
     "supplied with one apple" should {
-      "produce a total cost of 60" in {
-        checkoutCalculator.calculateTotal(List(Apple())) shouldBe 60
+      "produce a total cost of 0.6" in {
+        checkoutCalculator.calculateTotal(List(Apple())) shouldBe 0.6
       }
     }
 
@@ -21,26 +21,26 @@ class CheckoutCalculatorSpec extends AnyWordSpec with Matchers {
     }
 
     "supplied with one orange" should {
-      "result in a total cost of 25" in {
-        checkoutCalculator.calculateTotal(List(Orange())) shouldBe 25
+      "result in a total cost of 0.25" in {
+        checkoutCalculator.calculateTotal(List(Orange())) shouldBe 0.25
       }
     }
 
     "supplied with one orange and one apple" should {
-      "result in a total cost of 85" in {
-        checkoutCalculator.calculateTotal(List(Orange(), Apple())) shouldBe 85
+      "result in a total cost of 0.85" in {
+        checkoutCalculator.calculateTotal(List(Orange(), Apple())) shouldBe 0.85
       }
     }
 
     "supplied with one orange and two apples" should {
-      "result in a total cost of 145" in {
-        checkoutCalculator.calculateTotal(List(Orange(), Apple(), Apple())) shouldBe 145
+      "result in a total cost of 1.45" in {
+        checkoutCalculator.calculateTotal(List(Orange(), Apple(), Apple())) shouldBe 1.45
       }
     }
 
     "supplied with two oranges and three apples in mixed order" should {
-      "result in a total cost of 230" in {
-        checkoutCalculator.calculateTotal(List(Apple(), Orange(), Apple(), Apple(), Orange())) shouldBe 230
+      "result in a total cost of 2.3" in {
+        checkoutCalculator.calculateTotal(List(Apple(), Orange(), Apple(), Apple(), Orange())) shouldBe 2.3
       }
     }
   }
