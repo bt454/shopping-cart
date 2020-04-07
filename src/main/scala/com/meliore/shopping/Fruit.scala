@@ -1,13 +1,6 @@
 package com.meliore.shopping
 
-sealed trait Fruit {
-  val cost: Int
-}
+sealed abstract class Fruit(val cost: Int)
 
-case object Apple extends Fruit {
-  override val cost: Int = 60
-}
-
-case object Orange extends Fruit {
-  override val cost: Int = 25
-}
+case class Apple() extends Fruit(60)
+case class Orange() extends Fruit(25)
