@@ -50,5 +50,11 @@ class IterableUtilsSpec extends AnyWordSpec with Matchers {
         }
       }
     }
+
+    "supplied with an iterable with 2,000,000 elements and n of 2" should {
+      "result in an iterable with every even element dropped" in {
+        dropEveryNth((1 to 2000000).toList, 2) shouldBe (1 to 2000000).filter(_ % 2 != 0).toList
+      }
+    }
   }
 }
