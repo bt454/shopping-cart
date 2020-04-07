@@ -3,5 +3,8 @@ package com.meliore.shopping
 class CheckoutCalculator {
 
   def calculateTotal(fruits: List[Fruit]): Int =
-    60
+    if (fruits.nonEmpty)
+      60
+    else
+      0
 }
