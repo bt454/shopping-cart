@@ -13,5 +13,11 @@ class CostFormatterSpec extends AnyWordSpec with Matchers {
         costFormatter.format(2.06) shouldBe "£2.06"
       }
     }
+
+    "supplied with a cost below £1" should {
+      "result in cost in pounds as string with £ prefix and expected leading zeros before and after decimal point" in {
+        costFormatter.format(0.06) shouldBe "£0.06"
+      }
+    }
   }
 }
